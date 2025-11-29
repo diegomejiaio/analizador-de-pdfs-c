@@ -232,7 +232,7 @@ function App() {
               <Card className="border-primary/20 bg-card p-4 shadow-sm">
                 <div className="mb-3 flex items-center gap-2">
                   <SpinnerGap className="animate-spin text-primary" size={20} weight="bold" />
-                  <span className="font-medium text-foreground text-sm">{analysisStatus.phase}</span>
+                  <span className="shimmer-text font-medium text-sm">{analysisStatus.phase}</span>
                   {analysisStatus.total > 0 && (
                     <Badge variant="secondary" className="ml-auto">
                       {analysisStatus.current}/{analysisStatus.total}
@@ -253,7 +253,7 @@ function App() {
                     <ScrollArea className="h-32">
                       <div className="space-y-1 rounded-md bg-muted p-3 font-mono text-xs">
                         {analysisStatus.logs.map((log, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-muted-foreground">
+                          <div key={idx} className="shimmer-text flex items-center gap-2">
                             <CheckCircle size={14} weight="fill" className="shrink-0 text-accent" />
                             <span>{log}</span>
                           </div>
